@@ -6,7 +6,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class SerialInputStream extends InputStream implements UsbSerialInterface.UsbReadCallback
 {
     protected final UsbSerialInterface device;
-    protected ArrayBlockingQueue data = new ArrayBlockingQueue<Integer>(512);
+    protected ArrayBlockingQueue data = new ArrayBlockingQueue<Integer>(256);
     protected volatile boolean is_open;
 
     public SerialInputStream(UsbSerialInterface device)
